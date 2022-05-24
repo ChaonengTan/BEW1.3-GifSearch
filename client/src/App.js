@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import { useLazyQuery } from "@apollo/client"
 import SearchGif from './queries/searchGif'
-import './App.css';
+import './App.css'; 
 
 function App() {
   const [term, setInput] = useState('')
