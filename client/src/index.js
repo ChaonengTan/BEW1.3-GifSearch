@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloProvider, InMemoryCache, ApolloClient } from '@apollo/client'
-const port = 4000
+const uri = process.env.NODE_ENV == 'production' ? 'graphql' : `http://localhost:${process.env.REACT_APP_PORT}/graphql`
 
 export const client = new ApolloClient({
-  uri: `http://localhost:${port}/graphql`,
+  uri,
   cache: new InMemoryCache()
 });
 
